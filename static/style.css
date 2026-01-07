@@ -161,3 +161,101 @@ button:hover {
     font-size: 20px;
     font-weight: bold;
 }
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+    .app {
+        gap: 20px;
+    }
+
+    .form-card {
+        width: 380px;
+    }
+
+    .result-card {
+        width: 240px;
+    }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .app {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .result-card {
+        max-width: 420px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group.full {
+        grid-column: span 1;
+    }
+
+    input {
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 11px;
+    }
+
+    .result-card p {
+        font-size: 18px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 22px 20px;
+    }
+}
+@media (hover: none) {
+    button:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
