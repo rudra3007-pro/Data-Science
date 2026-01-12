@@ -1,0 +1,19 @@
+# Exported from Render on 2026-01-12T10:21:22Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: Data-Science
+      runtime: python
+      repo: https://github.com/rudra3007-pro/Data-Science
+      plan: free
+      envVars:
+      - key: hello
+        sync: false
+      region: virginia
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn app:app
+      autoDeployTrigger: commit
